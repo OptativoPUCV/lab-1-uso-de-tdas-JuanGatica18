@@ -2,3 +2,24 @@ Wed, Mar 19, 2025  8:29:31 AM:
  tests:  0|5
 total_score: 0/70
 3f6cb15
+Wed, Mar 19, 2025  9:03:15 AM: 
+ exercises.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'crea_lista':
+exercises.c:48:21: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+       void* valor = i;
+                     ^
+exercises.c: In function 'sumaLista':
+exercises.c:62:10: error: 'L' redeclared as different kind of symbol
+    List* L = create_list();
+          ^
+exercises.c:60:21: note: previous definition of 'L' was here
+ int sumaLista(List *L) {
+                     ^
+exercises.c:65:21: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+       void* valor = i;
+                     ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+3396c75
