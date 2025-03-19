@@ -45,3 +45,26 @@ Wed, Mar 19, 2025  9:11:07 AM:
  tests:  1|4
 total_score: 10/70
 a618625
+Wed, Mar 19, 2025  9:21:47 AM: 
+ exercises.c | 17 +++++++++++++++--
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaLista':
+exercises.c:65:21: error: comparison between pointer and integer [-Werror]
+    for(int k = 0; k < get_size; k++)
+                     ^
+exercises.c:70:10: error: invalid use of undefined type 'struct List'
+          suma += (int**) L[k];
+          ^~~~
+exercises.c:70:27: error: dereferencing pointer to incomplete type 'List {aka struct List}'
+          suma += (int**) L[k];
+                           ^
+exercises.c:74:10: error: invalid use of undefined type 'struct List'
+          suma += (int**)L[k];
+          ^~~~
+exercises.c:64:8: error: unused variable 'total' [-Werror=unused-variable]
+    int total = get_size(L);
+        ^~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+bbda106
