@@ -150,3 +150,64 @@ stack.h:17:7: note: expected 'Stack * {aka struct List *}' but argument is of ty
 cc1.exe: all warnings being treated as errors
 Compilation failed
 333e4c1
+ju., 20 de mar. de 2025 21:43:48: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:104:4: error: unknown type name 'stack'
+    stack* aux = create_list();
+    ^~~~~
+exercises.c:104:17: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+    stack* aux = create_list();
+                 ^~~~~~~~~~~
+exercises.c:105:18: error: comparison between pointer and integer [-Werror]
+    while(top(P1) != -1)
+                  ^~
+exercises.c:107:7: error: unknown type name 'stack'
+       stack* elemento = top(P1);
+       ^~~~~
+exercises.c:108:12: error: passing argument 1 of 'push' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       push(aux, elemento);
+            ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:112:14: error: passing argument 1 of 'top' from incompatible pointer type [-Werror=incompatible-pointer-types]
+    while(top(aux) != -1)
+              ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:14:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void *top(Stack *stack) { return first(stack); }
+       ^~~
+In file included from test.c:5:0:
+exercises.c:112:19: error: comparison between pointer and integer [-Werror]
+    while(top(aux) != -1)
+                   ^~
+exercises.c:114:7: error: unknown type name 'stack'
+       stack* elemento = top(aux);
+       ^~~~~
+exercises.c:114:29: error: passing argument 1 of 'top' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       stack* elemento = top(aux);
+                             ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:14:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void *top(Stack *stack) { return first(stack); }
+       ^~~
+In file included from test.c:5:0:
+exercises.c:117:11: error: passing argument 1 of 'pop' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       pop(aux);
+           ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:17:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void *pop(Stack *stack) { return popFront(stack); }
+       ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+ea6abcd
