@@ -211,3 +211,91 @@ stack.h:17:7: note: expected 'Stack * {aka struct List *}' but argument is of ty
 cc1.exe: all warnings being treated as errors
 Compilation failed
 ea6abcd
+ju., 20 de mar. de 2025 21:44:20: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:104:4: error: unknown type name 'stack'
+    stack* aux = create_list();
+    ^~~~~
+exercises.c:104:17: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+    stack* aux = create_list();
+                 ^~~~~~~~~~~
+exercises.c:105:18: error: comparison between pointer and integer [-Werror]
+    while(top(P1) != -1)
+                  ^~
+exercises.c:107:22: error: initialization makes integer from pointer without a cast [-Werror=int-conversion]
+       int elemento = top(P1);
+                      ^~~
+exercises.c:108:12: error: passing argument 1 of 'push' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       push(aux, elemento);
+            ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:108:17: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+       push(aux, elemento);
+                 ^~~~~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'int'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:112:14: error: passing argument 1 of 'top' from incompatible pointer type [-Werror=incompatible-pointer-types]
+    while(top(aux) != -1)
+              ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:14:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void *top(Stack *stack) { return first(stack); }
+       ^~~
+In file included from test.c:5:0:
+exercises.c:112:19: error: comparison between pointer and integer [-Werror]
+    while(top(aux) != -1)
+                   ^~
+exercises.c:114:26: error: passing argument 1 of 'top' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       int elemento = top(aux);
+                          ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:14:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void *top(Stack *stack) { return first(stack); }
+       ^~~
+In file included from test.c:5:0:
+exercises.c:114:22: error: initialization makes integer from pointer without a cast [-Werror=int-conversion]
+       int elemento = top(aux);
+                      ^~~
+exercises.c:115:15: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+       push(P1,elemento);
+               ^~~~~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'int'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:116:15: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+       push(P2,elemento);
+               ^~~~~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'int'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:117:11: error: passing argument 1 of 'pop' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       pop(aux);
+           ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:17:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void *pop(Stack *stack) { return popFront(stack); }
+       ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+4c6aef6

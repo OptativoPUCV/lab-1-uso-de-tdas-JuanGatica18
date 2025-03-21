@@ -104,14 +104,14 @@ void copia_pila(Stack* P1, Stack* P2) {
    stack* aux = create_list();
    while(top(P1) != -1)
    {
-      stack* elemento = top(P1);
+      int elemento = top(P1);
       push(aux, elemento);
       pop(P1);
    }
 
    while(top(aux) != -1)
    {
-      stack* elemento = top(aux);
+      int elemento = top(aux);
       push(P1,elemento);
       push(P2,elemento);
       pop(aux);
