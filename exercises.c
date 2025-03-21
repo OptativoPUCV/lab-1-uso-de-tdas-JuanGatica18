@@ -101,7 +101,7 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
-   stack* aux = create_list();
+   Stack* aux = create_list();
    while(top(P1) != -1)
    {
       int elemento = top(P1);
