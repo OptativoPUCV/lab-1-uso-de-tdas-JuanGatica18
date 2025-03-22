@@ -141,7 +141,7 @@ int parentesisBalanceados(char *cadena) {
    {
       push(pila, (void *)(long)cadena[r]);
    }
-   for(int r = 0; r < contador; r++)
+   for(int r = contador; r > 0; r--)
    {
       if (contador/2 == r) return 1;
       if (top(pila) != (void *) (long)cadena[contador-1]) return 0;
