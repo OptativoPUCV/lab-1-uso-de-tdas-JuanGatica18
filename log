@@ -665,3 +665,17 @@ exercises.c:141:16: error: assignment makes pointer from integer without a cast 
 cc1.exe: all warnings being treated as errors
 Compilation failed
 f5cd2ac
+sá., 22 de mar. de 2025  0:10:05: 
+ exercises.c | 20 +++++++++++++-------
+ 1 file changed, 13 insertions(+), 7 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:141:18: error: expected expression before 'void'
+       push(pila, void* cadena[contador]);
+                  ^~~~
+exercises.c:146:21: error: comparison between pointer and integer [-Werror]
+       if (top(pila) == cadena[contador - 1])
+                     ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+019c988
