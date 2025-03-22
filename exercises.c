@@ -141,12 +141,14 @@ int parentesisBalanceados(char *cadena) {
    {
       push(pila, (void *)(long)cadena[r]);
    }
-   for(int r = contador; r > 0; r--)
+   for(int r = 0; r < contador/2 ; r++)
    {
-      if (contador/2 == r) return 1;
-      if (top(pila) == (void *) (long)cadena[contador-1]) return 0;
-      pop(pila);
+      char elemTras = char top(pila);
+      if ('{' == elemTras && cadena[r] == '}' ||'[' == elemTras && cadena[r] == ']' ||'(' == elemTras && cadena[r] == ')' ) return 1;
+
+      pop(pila)
    }
 
    return 0;
 }
+
