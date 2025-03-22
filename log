@@ -408,3 +408,9 @@ vi., 21 de mar. de 2025 23:02:52:
  1 file changed, 8 insertions(+), 1 deletion(-)
  tests:  5|0
 ae0f63d
+vi., 21 de mar. de 2025 23:04:33: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|1
+total_score: 50/70
+c3fa0b7
