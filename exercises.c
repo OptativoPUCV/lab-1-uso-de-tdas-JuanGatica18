@@ -138,7 +138,7 @@ int parentesisBalanceados(char *cadena) {
    {
       void* elemento = cadena[t];
       push(pila1,elemento);
-      elemento = cadena[contador];
+      elemento = cadena[contador -1];
       push(pila2,elemento);
       contador--;
    }
