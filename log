@@ -765,3 +765,21 @@ exercises.c:150:4: error: expected ';' before '}' token
 cc1.exe: all warnings being treated as errors
 Compilation failed
 b9ef6af
+sá., 22 de mar. de 2025  0:40:40: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:148:27: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+       if ('{' == elemTras && cadena[r] == '}' ||'[' == elemTras && cadena[r] == ']' ||'(' == elemTras && cadena[r] == ')' ) return 1;
+           ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:148:103: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+       if ('{' == elemTras && cadena[r] == '}' ||'[' == elemTras && cadena[r] == ']' ||'(' == elemTras && cadena[r] == ')' ) return 1;
+                                                                                       ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+In file included from test.c:5:0:
+exercises.c:151:4: error: expected ';' before '}' token
+    }
+    ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+3bd3546

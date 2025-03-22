@@ -141,9 +141,10 @@ int parentesisBalanceados(char *cadena) {
    {
       push(pila, (void *)(long)cadena[r]);
    }
-   for(int r = 0; r < contador/2 ; r++)
+
+   for(int r = 0; r < contador ; r++)
    {
-      char elemTras = char top(pila);
+      char elemTras =  (char) (long) top(pila);
       if ('{' == elemTras && cadena[r] == '}' ||'[' == elemTras && cadena[r] == ']' ||'(' == elemTras && cadena[r] == ')' ) return 1;
 
       pop(pila)
