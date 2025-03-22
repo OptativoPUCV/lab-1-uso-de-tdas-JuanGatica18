@@ -689,3 +689,13 @@ exercises.c:142:18: error: expected expression before 'void'
                   ^~~~
 Compilation failed
 be33ea1
+sá., 22 de mar. de 2025  0:15:36: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:142:18: error: expected expression before 'char'
+       push(pila, char* cadena[r]);
+                  ^~~~
+Compilation failed
+999c0e1
