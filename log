@@ -800,3 +800,14 @@ exercises.c:148:103: error: suggest parentheses around '&&' within '||' [-Werror
 cc1.exe: all warnings being treated as errors
 Compilation failed
 9a76006
+sá., 22 de mar. de 2025  0:42:43: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:148:124: error: multi-character character constant [-Werror=multichar]
+       if (('}' == elemTras && cadena[r] == '{') ||(']' == elemTras && cadena[r] == '[' )||(')' == elemTras && cadena[r] == '()') ) return 1;
+                                                                                                                            ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+ea9d150
