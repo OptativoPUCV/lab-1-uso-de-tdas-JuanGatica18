@@ -144,10 +144,9 @@ int parentesisBalanceados(char *cadena) {
    for(int r = contador; r > 0; r--)
    {
       if (contador/2 == r) return 1;
-      if (top(pila) != (void *) (long)cadena[contador]) return 0;
+      if (top(pila) == (void *) (long)cadena[contador-1]) return 0;
       pop(pila);
    }
 
    return 0;
 }
-
