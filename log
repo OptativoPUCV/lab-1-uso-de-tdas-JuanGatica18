@@ -428,3 +428,17 @@ exercises.c:135:24: error: expected expression before ')' token
                         ^
 Compilation failed
 3a4c3aa
+vi., 21 de mar. de 2025 23:06:16: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:135:13: error: spurious trailing '%' in format [-Werror=format=]
+    printf("i%",contador);
+             ^
+exercises.c:135:11: error: too many arguments for format [-Werror=format-extra-args]
+    printf("i%",contador);
+           ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+23c9f38
