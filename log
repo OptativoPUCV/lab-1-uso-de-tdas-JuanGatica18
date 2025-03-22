@@ -709,3 +709,14 @@ exercises.c:142:18: error: expected expression before 'int'
                   ^~~
 Compilation failed
 a3e577e
+sá., 22 de mar. de 2025  0:17:30: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:142:19: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+       push(pila,  (void *) cadena[r]);
+                   ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+f83c396
