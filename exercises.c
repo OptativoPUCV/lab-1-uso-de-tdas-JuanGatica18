@@ -132,12 +132,12 @@ int parentesisBalanceados(char *cadena) {
    {
       contador ++1;
    }
-   stack* p1 = create_stack();
-   stack* P2 = create_stack();
+   stack* pila1 = create_stack();
+   stack* pila2 = create_stack();
    for(int t = 0; t <= contador/2 ; t++)
    {
-      push(p1,void* cadena[t]);
-      push(p2,void* cadena[contador]);
+      push(pila1,void* cadena[t]);
+      push(pila2,void* cadena[contador]);
       contador--;
    }
 
