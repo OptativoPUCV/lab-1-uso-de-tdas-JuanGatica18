@@ -132,7 +132,7 @@ int parentesisBalanceados(char *cadena) {
    {
       contador += 1;
    }
-
+   printf("contador",i%);
    return contador;
 }
 

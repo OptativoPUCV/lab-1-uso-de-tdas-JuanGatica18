@@ -414,3 +414,17 @@ vi., 21 de mar. de 2025 23:04:33:
  tests:  5|1
 total_score: 50/70
 c3fa0b7
+vi., 21 de mar. de 2025 23:05:33: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:135:22: error: 'i' undeclared (first use in this function)
+    printf("contador",i%);
+                      ^
+exercises.c:135:22: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:135:24: error: expected expression before ')' token
+    printf("contador",i%);
+                        ^
+Compilation failed
+3a4c3aa
