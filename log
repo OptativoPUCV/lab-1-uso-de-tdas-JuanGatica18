@@ -679,3 +679,13 @@ exercises.c:146:21: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 019c988
+sá., 22 de mar. de 2025  0:15:26: 
+ exercises.c | 11 ++---------
+ 1 file changed, 2 insertions(+), 9 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:142:18: error: expected expression before 'void'
+       push(pila, void* cadena[r]);
+                  ^~~~
+Compilation failed
+be33ea1
