@@ -591,3 +591,49 @@ stack.h:11:6: note: expected 'void *' but argument is of type 'char'
 cc1.exe: all warnings being treated as errors
 Compilation failed
 ce9ad74
+vi., 21 de mar. de 2025 23:22:01: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:133:18: error: expected ';' before numeric constant
+       contador ++1;
+                  ^
+exercises.c:135:4: error: unknown type name 'stack'
+    stack* pila1 = create_stack();
+    ^~~~~
+exercises.c:135:19: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+    stack* pila1 = create_stack();
+                   ^~~~~~~~~~~~
+exercises.c:136:4: error: unknown type name 'stack'
+    stack* pila2 = create_stack();
+    ^~~~~
+exercises.c:136:19: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+    stack* pila2 = create_stack();
+                   ^~~~~~~~~~~~
+exercises.c:139:24: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+       void* elemento = cadena[t];
+                        ^~~~~~
+exercises.c:140:12: error: passing argument 1 of 'push' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       push(pila1,elemento);
+            ^~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:141:16: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+       elemento = cadena[contador];
+                ^
+exercises.c:142:12: error: passing argument 1 of 'push' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       push(pila2,elemento);
+            ^~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'Stack * {aka struct List *}' but argument is of type 'int *'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+10b64d0
