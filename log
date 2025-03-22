@@ -403,3 +403,8 @@ ju., 20 de mar. de 2025 21:48:48:
  tests:  4|1
 total_score: 50/70
 f6a67a8
+vi., 21 de mar. de 2025 23:02:52: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+ tests:  5|0
+ae0f63d
