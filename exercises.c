@@ -130,10 +130,10 @@ int parentesisBalanceados(char *cadena) {
    int contador = 0;
    while(cadena[contador] != '\0')
    {
-      contador ++1;
+      contador ++;
    }
-   stack* pila1 = create_stack();
-   stack* pila2 = create_stack();
+   Stack* pila1 = create_stack();
+   Stack* pila2 = create_stack();
    for(int t = 0; t <= contador/2 ; t++)
    {
       void* elemento = cadena[t];
@@ -143,6 +143,6 @@ int parentesisBalanceados(char *cadena) {
       contador--;
    }
 
-   return contador;
+   return 0;
 }
 
