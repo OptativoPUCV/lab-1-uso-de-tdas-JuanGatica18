@@ -130,9 +130,17 @@ int parentesisBalanceados(char *cadena) {
    int contador = 0;
    while(cadena[contador] != '\0')
    {
-      contador += 1;
+      contador ++1;
    }
-   printf("i%",contador);
+   stack* p1 = create_stack();
+   stack* P2 = create_stack();
+   for(int t = 0; t <= contador/2 ; t++)
+   {
+      push(p1,void* cadena[t]);
+      push(p2,void* cadena[contador]);
+      contador--;
+   }
+
    return contador;
 }
 
